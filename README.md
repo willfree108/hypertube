@@ -8,9 +8,9 @@ Made with the Vue eco-system: Vue.js (like React), Vue-routeur, VueX (like Redux
 ## Part 1: Sign Up
 ![](https://media.giphy.com/media/xUPGcLnn2JDo1eqCwU/giphy.gif)
 ## Part 2: Gallery
-![](https://media.giphy.com/media/3oKIPtSoxiDH4gAeK4/giphy.gif)
+![](https://media.giphy.com/media/3ohzdVT9GF42KHA8zm/giphy.gif)
 ## Part 3: Viewer
-![](https://media.giphy.com/media/3o7btOhUeg7W5jdeM0/giphy.gif)
+
 
 Translation script which convert an object to any language in front/src/api/translate.js thanks to google API.
 
@@ -75,4 +75,6 @@ const add = db.wrapper(addAsync) // wrap in a promise
 ### Scraper
 
 Get torrent from yts and RARGB and then format.
-(extratorrent died during the process, RIP)
+(extratorrent died during the process, may you RIP)
+
+Have a nice day.
