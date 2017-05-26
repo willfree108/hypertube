@@ -1,37 +1,78 @@
-## Welcome to GitHub Pages
+## Welcome to Hypertube
 
-You can use the [editor on GitHub](https://github.com/willfree108/hypertube/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Hypertube is a 42 project which consists of streaming in real-time a movie from his torrent.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Front
 
-### Markdown
+Made with the Vue eco-system: Vue.js (like React), Vue-routeur, VueX (like Redux), Vue-i18n, elements.js and axios.
+## Part 1
+![](https://media.giphy.com/media/xUPGcLnn2JDo1eqCwU/giphy.gif)
+## Part 2
+![](https://media.giphy.com/media/3o7bubHJYIx3Ox53gI/giphy.gif)
+## Part 3
+![](https://media.giphy.com/media/3o7btOhUeg7W5jdeM0/giphy.gif)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Translation script which convert an object to any language in front/src/api/translate.js thanks to google API.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+node translate.js
+Succesfully Created! => File: ../lang/en.json
+Succesfully Created! => File: ../lang/it.json
+Succesfully Created! => File: ../lang/ko.json
+Succesfully Created! => File: ../lang/es.json
+Succesfully Created! => File: ../lang/fr.json
+Succesfully Created! => File: ../lang/ja.json
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Back
 
-### Jekyll Themes
+Made with node.js/express following a REST architecture with a tiny system of hooks and services wrapped within a promise.
+Authentification are handled by passport and respond with a jwt.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/willfree108/hypertube/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```js
+const fieldPost = ['email']
 
-### Support or Contact
+router
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+/**
+ *  Guard for sending an email to recover
+ */
+
+.post('/', h.required(...fieldPost))
+.post('/', h.pickBefore(...fieldPost))
+.post('/', h.valid)
+
+.post('/', function(req, res) {
+  User.recover(req.body.email)
+    .then(data => res.status(200).send(data))
+    .catch(err => res.status(500).send(err))
+})
+
+module.exports = router
+
+```
+
+```js
+/**
+ *  Add a comment
+ */
+ 
+async function addAsync (newComment, resolve, reject) {
+  try {
+    const creat = new Date()
+    newComment.unixstamp = creat.getTime()
+    newComment.created = creat.toISOString().slice(0, 10)
+    await insert(newComment)
+    resolve('Comment has been added!')
+  } catch (e) {
+    reject('An error occured!')
+  }
+}
+
+const add = db.wrapper(addAsync) // wrap in a promise
+```
+
+### Scraper
+
+Get torrent from yts and RARGB.
+(extratorrent died during the process, RIP)
