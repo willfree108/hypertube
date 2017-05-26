@@ -1,15 +1,15 @@
 ## Welcome to Hypertube
 
-Hypertube is a 42 project which consists of streaming in real-time a movie from his torrent.
+Hypertube is a 42 project which consists of streaming in real-time a movie directly from his torrent.
 
 ### Front
 
 Made with the Vue eco-system: Vue.js (like React), Vue-routeur, VueX (like Redux), Vue-i18n, elements.js and axios.
-## Part 1
+## Part 1: Sign Up
 ![](https://media.giphy.com/media/xUPGcLnn2JDo1eqCwU/giphy.gif)
-## Part 2
-![](https://media.giphy.com/media/3o7bubHJYIx3Ox53gI/giphy.gif)
-## Part 3
+## Part 2: Gallery
+![](https://media.giphy.com/media/3oKIPtSoxiDH4gAeK4/giphy.gif)
+## Part 3: Viewer
 ![](https://media.giphy.com/media/3o7btOhUeg7W5jdeM0/giphy.gif)
 
 Translation script which convert an object to any language in front/src/api/translate.js thanks to google API.
@@ -74,5 +74,5 @@ const add = db.wrapper(addAsync) // wrap in a promise
 
 ### Scraper
 
-Get torrent from yts and RARGB.
+Get torrent from yts and RARGB and then format.
 (extratorrent died during the process, RIP)
