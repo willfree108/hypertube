@@ -1,0 +1,325 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  background-color: #eef1f6;
+}
+
+html, body, #app {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  flex:1;
+}
+
+.el-menu-vertical-demo {
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.tright {
+  text-align: right;
+}
+
+.tleft {
+  text-align: left;
+}
+
+.form {
+  min-width: 500px;
+}
+
+.formName .el-form-item__content {
+  width: none !important;
+  margin-left: 0 !important;
+}
+
+.formName .el-form-item__label {
+  text-align: initial !important;
+}
+
+.el-form-item__label  {
+  color: inherit;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menuSideRight {
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  bottom: 0px;
+  width: 200px;
+  transition: all 0.4s;
+}
+
+.menuSideLeft {
+  position: fixed;
+  top: 60px;
+  left: -200px;
+  bottom: 0px;
+  width: 200px;
+  transition: all 0.4s;
+}
+
+.appFixedRight {
+  position: fixed;
+  top: 60px;
+  left: 200px;
+  bottom:0px;
+  right: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.4s;
+}
+
+.appFixedLeft {
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  bottom:0px;
+  right: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.4s;
+}
+
+.moviePapa .el-card__body {
+  padding: 0px;
+  height: 100%;
+}
+
+.appFlex {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.appMarginBottom {
+  margin-bottom: 200px;
+}
+.el-menu--horizontal .el-menu-item {
+  float: right;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter {
+  transform: translateX(100px);
+  opacity: 0;
+}
+.slide-fade-leave-to {
+ transform: translateX(-100px);
+ opacity: 0;
+}
+
+.searchContainer {
+  position: fixed;
+  top: 10px;
+  text-align: right;
+  left: 0px;
+  width: 50%;
+  height: 60px;
+  z-index: 2;
+}
+
+.el-menu-item {
+  z-index: 5;
+}
+
+.searchMenu {
+  z-index: 3;
+  width: 300px;
+  height: 40px;
+  color: white;
+  transform: translate(50%);
+}
+
+.customLoader {
+  position: fixed !important;
+}
+
+.lang {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: inherit;
+  z-index: 25;
+}
+
+.lang .hover {
+  cursor: pointer;
+}
+
+.lang .hover:hover {
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.langSelect {
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+textarea {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 100px;
+}
+
+.relative {
+  position: relative;
+}
+
+.slider {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.sortBtn {
+  position: relative;
+}
+
+.sortBtn label{
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  z-index: 10;
+}
+.tslide {
+  font-size: 14px;
+  color: #48576a;
+}
+
+.el-tree {
+  margin-top: 20px;
+}
+
+.el-notification {
+  top: 70px !important;
+}
+
+.el-tree {
+    margin-top: 20px;
+    height: 500px;
+    overflow: auto;
+}
+.genre {
+  border-top: 1px solid rgba(0,0,0,0.2);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .mobile-invisible {
+        display: none;
+    }
+    .menuSideRight {
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      overflow: auto;
+    }
+    .searchMenu {
+      z-index: 3;
+      width: 200px;
+      height: 40px;
+      color: white;
+      transform: translate(50%);
+    }
+
+}
+@media (min-width: 901px) {
+    .mobile-visible {
+        display: none;
+    }
+}
+
+.video-js {
+    height: 100% !important;
+}
+
+.el-card__body {
+  padding: 20px;
+  position: relative;
+}

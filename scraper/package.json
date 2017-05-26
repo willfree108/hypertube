@@ -1,0 +1,46 @@
+{
+  "name": "hypertube-scraper",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "author": {
+    "name": "romontei",
+    "email": "romontei@student.42.fr"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive",
+    "flow": "flow check",
+    "flow-typed": "flow-typed install"
+  },
+  "dependencies": {
+    "eslint": "^3.19.0",
+    "fs": "^0.0.1-security",
+    "get-json": "0.0.3",
+    "helmet": "^3.5.0",
+    "imdb-api": "^3.0.0",
+    "mocha": "^3.3.0",
+    "mongodb": "^2.2.26",
+    "moviedb": "^0.2.8",
+    "opensubtitles-api": "^4.0.0-rc2",
+    "parse-torrent-name": "^0.5.4",
+    "rarbg": "^0.4.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "torrent-tracker": "^0.1.0",
+    "torrent-tracker-health": "^1.0.0",
+    "winston": "^2.3.1"
+  }
+}
